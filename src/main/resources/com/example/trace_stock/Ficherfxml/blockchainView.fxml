@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.trace_stock.Controllers.BlockchainController"
+      spacing="30.0" styleClass="page-content">
+
+    <stylesheets>
+        <URL value="@../CSS/bootstrap-style.css" />
+        <URL value="@../CSS/style.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+    <!-- Header de la page -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Transactions Blockchain" styleClass="page-title"/>
+            <Label text="Consultez l'historique sécurisé des transactions" styleClass="page-subtitle"/>
+        </VBox>
+        <Button text="Actualiser" onAction="#actualiserTransactions" styleClass="modern-btn-secondary"/>
+    </HBox>
+
+    <!-- Table blockchain -->
+    <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+        <TableView fx:id="blockchainTable" styleClass="modern-table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colHash" text="Hash" prefWidth="350"/>
+                <TableColumn fx:id="colProduit" text="Produit" prefWidth="180"/>
+                <TableColumn fx:id="colQuantite" text="Quantité" prefWidth="120"/>
+                <TableColumn fx:id="colDate" text="Date" prefWidth="180"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox>

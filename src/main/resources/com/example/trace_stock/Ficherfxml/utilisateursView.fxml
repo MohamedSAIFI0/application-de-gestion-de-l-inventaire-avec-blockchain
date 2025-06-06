@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.trace_stock.Controllers.UtilisateursController"
+      spacing="30.0" styleClass="page-content">
+
+    <stylesheets>
+        <URL value="@../CSS/bootstrap-style.css" />
+        <URL value="@../CSS/style.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+    <!-- Header de la page -->
+    <VBox spacing="8">
+        <Label text="Gestion des Utilisateurs" styleClass="page-title"/>
+        <Label text="Administrez les comptes utilisateurs du système" styleClass="page-subtitle"/>
+    </VBox>
+
+    <!-- Barre d'actions -->
+    <HBox spacing="15" alignment="CENTER_LEFT" styleClass="action-bar">
+        <Button text="Ajouter" fx:id="btnAjouter" onAction="#Ajouter_Utilisateur" styleClass="modern-btn"/>
+        <Button text="Modifier" fx:id="btnModifier" onAction="#Modifier_Utilisateur" styleClass="modern-btn-secondary"/>
+        <Button text="Supprimer" fx:id="btnSupprimer" onAction="#Supprimer_Utilisateur" styleClass="modern-btn-danger"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Rechercher un utilisateur..." styleClass="search-field" prefWidth="300"/>
+    </HBox>
+
+    <!-- Table des utilisateurs -->
+    <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+        <TableView fx:id="utilisateursTable" styleClass="modern-table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
+                <TableColumn fx:id="colNom" text="Nom" prefWidth="200"/>
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="280"/>
+                <TableColumn fx:id="colRole" text="Rôle" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox>

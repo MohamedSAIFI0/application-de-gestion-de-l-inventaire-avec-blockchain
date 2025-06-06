@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.trace_stock.Controllers.MouvementsController"
+      spacing="30.0" styleClass="page-content">
+
+    <stylesheets>
+        <URL value="@../CSS/bootstrap-style.css" />
+        <URL value="@../CSS/style.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+
+    <VBox spacing="8">
+        <Label text="Gestion des Mouvements" styleClass="page-title"/>
+        <Label text="Suivez les entrées et sorties de stock" styleClass="page-subtitle"/>
+    </VBox>
+
+
+    <HBox spacing="15" alignment="CENTER_LEFT" styleClass="action-bar">
+        <Button text="Ajouter" fx:id="btnAjouter" onAction="#ajouterMouvement" styleClass="modern-btn"/>
+        <Button text="Modifier" fx:id="btnModifier" onAction="#modifierMouvement" styleClass="modern-btn-secondary"/>
+        <Button text="Supprimer" fx:id="btnSupprimer" onAction="#supprimerMouvement" styleClass="modern-btn-danger"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Rechercher un mouvement..." styleClass="search-field" prefWidth="300"/>
+    </HBox>
+
+
+    <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+        <TableView fx:id="mouvementsTable" styleClass="modern-table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
+                <TableColumn fx:id="colProduit" text="Produit" prefWidth="180"/>
+                <TableColumn fx:id="colType" text="Type de mouvement" prefWidth="180"/>
+                <TableColumn fx:id="colQuantite" text="Quantité" prefWidth="120"/>
+                <TableColumn fx:id="colDate" text="Date" prefWidth="180"/>
+                <TableColumn fx:id="colUtilisateur" text="Utilisateur" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox>

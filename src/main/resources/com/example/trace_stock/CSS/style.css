@@ -1,0 +1,88 @@
+/* === DESIGN MODERNE NOIR & TURQUOISE POUR LE DASHBOARD === */
+
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #00d4ff, #005678);
+    -fx-pref-width: 260;
+    -fx-padding: 25 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0, 5, 0);
+}
+
+.sidebar-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 22px;
+    -fx-padding: 0 25 30 25;
+}
+
+/* Boutons de navigation */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f1f3f5;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 16 25;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+    -fx-pref-width: 260;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(0, 223, 255, 0.15);
+    -fx-text-fill: #ffffff;
+}
+
+.nav-button.active {
+    -fx-background-color: rgba(0, 223, 255, 0.3);
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 600;
+}
+
+/* Boutons modernes */
+.modern-btn {
+    -fx-background-color: linear-gradient(to bottom right, #00d4ff, #00bfa6);
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 223, 255, 0.3), 10, 0, 0, 2);
+}
+
+.modern-btn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #00c0e0, #00a997);
+    -fx-effect: dropshadow(gaussian, rgba(0, 223, 255, 0.4), 15, 0, 0, 3);
+}
+
+/* Cartes */
+.dashboard-card {
+    -fx-background-color: #fff;
+    -fx-background-radius: 16;
+    -fx-border-color: #292929;
+    -fx-border-width: 1;
+    -fx-padding: 25;
+}
+
+.card-value-primary {
+    -fx-text-fill: #00d4ff;
+}
+
+.card-value-danger {
+    -fx-text-fill: #ff4d6d;
+}
+
+.card-value-success {
+    -fx-text-fill: #40c057;
+}
+
+/* Texte général */
+.modern-title, .dashboard-title {
+    -fx-text-fill: #00d4ff;
+}
+
+.dashboard-subtitle {
+    -fx-text-fill: #aab0b6;
+}
+
+.content-pane, .page-content {
+    -fx-background-color: #fff;
+}

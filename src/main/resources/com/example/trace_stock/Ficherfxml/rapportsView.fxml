@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.trace_stock.Controllers.RapportsController"
+      spacing="30.0" styleClass="page-content">
+
+    <stylesheets>
+        <URL value="@../CSS/bootstrap-style.css" />
+        <URL value="@../CSS/style.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+    <!-- Header de la page -->
+    <VBox spacing="8">
+        <Label text="Rapports" styleClass="page-title"/>
+        <Label text="Générez et consultez les rapports du système" styleClass="page-subtitle"/>
+    </VBox>
+
+    <!-- Actions -->
+    <HBox spacing="15" alignment="CENTER_LEFT" styleClass="action-bar">
+        <Button text="Générer un rapport" fx:id="btnGenerer" styleClass="modern-btn"/>
+        <Region HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <!-- Zone de rapport -->
+    <VBox styleClass="report-container" VBox.vgrow="ALWAYS">
+        <Label text="Contenu du rapport" styleClass="section-label"/>
+        <TextArea fx:id="rapportArea" styleClass="report-area" prefHeight="400" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+</VBox>

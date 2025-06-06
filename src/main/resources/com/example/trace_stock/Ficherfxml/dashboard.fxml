@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<VBox spacing="30.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.trace_stock.Controllers.DashboardController"
+      styleClass="dashboard-content">
+
+    <stylesheets>
+        <URL value="@../CSS/bootstrap-style.css" />
+        <URL value="@../CSS/style.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+    <!-- Header du dashboard -->
+    <VBox spacing="8">
+        <Label text="Dashboard" styleClass="dashboard-title"/>
+        <Label text="Vue d'ensemble de votre système d'inventaire" styleClass="dashboard-subtitle"/>
+    </VBox>
+
+    <!-- Cartes de statistiques -->
+    <HBox spacing="25.0" alignment="CENTER_LEFT">
+        <VBox styleClass="dashboard-card" spacing="15" prefWidth="200">
+            <Label text="Total Produits" styleClass="card-label"/>
+            <Label fx:id="totalProduitsLabel" text="..." styleClass="card-value, card-value-primary"/>
+        </VBox>
+
+        <VBox styleClass="dashboard-card" spacing="15" prefWidth="200">
+            <Label text="Stock Critique" styleClass="card-label"/>
+            <Label fx:id="stockCritiqueLabel" text="..." styleClass="card-value, card-value-danger"/>
+        </VBox>
+
+        <VBox styleClass="dashboard-card" spacing="15" prefWidth="200">
+            <Label text="Transactions Blockchain" styleClass="card-label"/>
+            <Label fx:id="transactionsBlockchainLabel" text="..." styleClass="card-value, card-value-success"/>
+        </VBox>
+    </HBox>
+
+    <!-- Section des transactions récentes -->
+    <VBox spacing="20" styleClass="dashboard-section">
+        <Label text="Transactions Récentes" styleClass="section-title"/>
+
+        <TableView fx:id="recentTransactionsTable" prefHeight="350" styleClass="modern-table">
+            <columns>
+                <TableColumn fx:id="colProduit" text="Produit" prefWidth="180"/>
+                <TableColumn fx:id="colType" text="Type" prefWidth="140"/>
+                <TableColumn fx:id="colQuantite" text="Quantité" prefWidth="100"/>
+                <TableColumn fx:id="colDate" text="Date" prefWidth="150"/>
+                <TableColumn fx:id="colHashBlockchain" text="Hash Blockchain" prefWidth="220"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox>

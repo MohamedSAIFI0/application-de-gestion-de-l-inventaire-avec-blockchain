@@ -1,0 +1,148 @@
+/* === DESIGN FUTURISTE POUR LES DIALOGUES === */
+
+/* Style général des dialogues */
+.dialog-pane {
+    -fx-background-color: #1a1a2e;
+    -fx-border-color: #2d3748;
+    -fx-border-width: 1;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 255, 0.2), 25, 0, 0, 8);
+    -fx-padding: 0;
+}
+
+/* Header du dialogue */
+.dialog-pane .header-panel {
+    -fx-background-color: linear-gradient(to right, #00d4ff, #5a67d8, #667eea);
+    -fx-background-radius: 16 16 0 0;
+    -fx-padding: 20 25;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 0.5px;
+}
+
+/* Contenu du dialogue */
+.dialog-pane .content {
+    -fx-background-color: #1a1a2e;
+    -fx-padding: 25;
+    -fx-background-radius: 0 0 16 16;
+}
+
+.dialog-pane .content .label {
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Champ de saisie dans les dialogues */
+.dialog-pane .text-field {
+    -fx-background-color: #16213e;
+    -fx-border-color: #2d3748;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12 16;
+    -fx-font-size: 14px;
+    -fx-text-fill: #e2e8f0;
+    -fx-pref-width: 300;
+}
+
+.dialog-pane .text-field:focused {
+    -fx-border-color: #00d4ff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 255, 0.25), 8, 0, 0, 0);
+}
+
+/* Zone des boutons */
+.dialog-pane .button-bar {
+    -fx-background-color: #0f0f23;
+    -fx-padding: 20 25;
+    -fx-spacing: 15;
+    -fx-background-radius: 0 0 16 16;
+    -fx-border-color: #2d3748;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Boutons des dialogues */
+.dialog-pane .button {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-letter-spacing: 0.5px;
+}
+
+/* Bouton OK/Confirmer */
+.dialog-pane .button.default {
+    -fx-background-color: linear-gradient(to right, #00d4ff, #5a67d8, #667eea);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 255, 0.3), 10, 0, 0, 2);
+}
+
+.dialog-pane .button.default:hover {
+    -fx-background-color: linear-gradient(to right, #00b8e6, #4c63d2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 212, 255, 0.4), 15, 0, 0, 3);
+}
+
+.dialog-pane .button.default:pressed {
+    -fx-background-color: linear-gradient(to right, #009cc7, #4353c7);
+}
+
+/* Bouton Annuler */
+.dialog-pane .button.cancel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8892b0;
+    -fx-border-color: #2d3748;
+    -fx-border-width: 2;
+}
+
+.dialog-pane .button.cancel:hover {
+    -fx-background-color: #16213e;
+    -fx-text-fill: #00d4ff;
+    -fx-border-color: #00d4ff;
+}
+
+.dialog-pane .button.cancel:pressed {
+    -fx-background-color: #0f0f23;
+}
+
+/* === STYLES SPÉCIFIQUES PAR TYPE D'ALERTE === */
+
+.dialog-pane.information .header-panel {
+    -fx-background-color: linear-gradient(to right, #00bcd4, #007bff);
+}
+
+.dialog-pane.confirmation .header-panel {
+    -fx-background-color: linear-gradient(to right, #28a745, #218838);
+}
+
+.dialog-pane.warning .header-panel {
+    -fx-background-color: linear-gradient(to right, #ffc107, #ff9800);
+    -fx-text-fill: #212529;
+}
+
+.dialog-pane.error .header-panel {
+    -fx-background-color: linear-gradient(to right, #dc3545, #b21f2d);
+}
+
+/* === STYLES POUR TextInputDialog === */
+.text-input-dialog .dialog-pane {
+    -fx-pref-width: 420;
+    -fx-min-width: 420;
+}
+
+.text-input-dialog .content {
+    -fx-spacing: 15;
+}
+
+.text-input-dialog .content .label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #ccd6f6;
+    -fx-font-weight: 500;
+}

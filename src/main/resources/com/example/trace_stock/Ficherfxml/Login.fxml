@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.trace_stock.Controllers.Login"
+            prefHeight="700.0" prefWidth="1200.0" styleClass="login-container">
+    <stylesheets>
+        <URL value="@../CSS/bootstrap-style.css" />
+        <URL value="@../CSS/style.css" />
+    </stylesheets>
+
+    <children>
+        <HBox prefWidth="1200" prefHeight="700" styleClass="main-container">
+
+            <!-- Section Gauche: Formulaire -->
+            <VBox fx:id="leftSection" spacing="25.0" alignment="CENTER" styleClass="form-container">
+
+                <!-- Logo/Titre -->
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="📦 Inventaire+" styleClass="app-title" />
+                    <Label text="Système de Gestion d'Inventaire avec Blockchain" styleClass="app-subtitle" />
+                </VBox>
+
+                <!-- Titre de Connexion -->
+                <VBox alignment="CENTER" spacing="8" style="-fx-padding: 20 0 10 0;">
+                    <Label text="Bienvenue" styleClass="welcome-title" />
+                    <Label text="Connectez-vous à votre espace sécurisé" styleClass="welcome-subtitle" />
+                </VBox>
+
+                <!-- Formulaire -->
+                <VBox spacing="20" alignment="CENTER" prefWidth="400">
+
+                    <!-- Email -->
+                    <VBox spacing="8">
+                        <Label text="Adresse Email" styleClass="field-label" />
+                        <TextField fx:id="emailField" promptText="exemple@email.com"
+                                   styleClass="form-control" prefHeight="45"/>
+                    </VBox>
+
+                    <!-- Mot de Passe -->
+                    <VBox spacing="8">
+                        <Label text="Mot de Passe" styleClass="field-label" />
+                        <PasswordField fx:id="passwordField" promptText="••••••••"
+                                       styleClass="form-control" prefHeight="45"/>
+                    </VBox>
+
+                    <!-- Options -->
+                    <HBox spacing="15" alignment="CENTER_LEFT" style="-fx-padding: 5 0;">
+                        <CheckBox fx:id="rememberMe" text="Se souvenir de moi" styleClass="modern-checkbox" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Hyperlink fx:id="forgotPasswordLink" text="Mot de passe oublié ?"
+                                   styleClass="forgot-link" />
+                    </HBox>
+
+                    <!-- Bouton -->
+                    <Button text="Se Connecter" styleClass="btn, btn-primary"
+                            prefWidth="400.0" prefHeight="50" onAction="#SignIn"/>
+
+
+                </VBox>
+            </VBox>
+
+            <!-- Section Droite: Branding -->
+            <VBox fx:id="rightSection" alignment="CENTER" styleClass="brand-section">
+                <padding>
+                    <Insets top="60" bottom="60" left="60" right="60" />
+                </padding>
+
+                <VBox alignment="CENTER" spacing="30">
+
+                    <!-- Icône principale -->
+                    <VBox alignment="CENTER" spacing="15">
+                        <Label text="⛓️" style="-fx-font-size: 80px;" />
+                        <Label text="Blockchain" styleClass="feature-title" />
+                        <Label text="Sécurisé" styleClass="feature-subtitle" />
+                    </VBox>
+
+                    <!-- Fonctionnalités -->
+                    <VBox spacing="25" alignment="CENTER">
+
+                        <HBox spacing="15" alignment="CENTER_LEFT">
+                            <Label text="🔒" style="-fx-font-size: 24px;" />
+                            <VBox>
+                                <Label text="Sécurité Avancée" styleClass="feature-item-title" />
+                                <Label text="Protection par blockchain" styleClass="feature-item-desc" />
+                            </VBox>
+                        </HBox>
+
+                        <HBox spacing="15" alignment="CENTER_LEFT">
+                            <Label text="📊" style="-fx-font-size: 24px;" />
+                            <VBox>
+                                <Label text="Traçabilité Complète" styleClass="feature-item-title" />
+                                <Label text="Suivi en temps réel" styleClass="feature-item-desc" />
+                            </VBox>
+                        </HBox>
+
+                        <HBox spacing="15" alignment="CENTER_LEFT">
+                            <Label text="⚡" style="-fx-font-size: 24px;" />
+                            <VBox>
+                                <Label text="Performance Optimale" styleClass="feature-item-title" />
+                                <Label text="Interface rapide et intuitive" styleClass="feature-item-desc" />
+                            </VBox>
+                        </HBox>
+
+                    </VBox>
+
+                    <!-- Citation -->
+                    <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30 0 0 0;">
+                        <Label text="« L'avenir de la gestion d'inventaire »" styleClass="quote-text" />
+                        <Label text="— Inventaire+ Team" styleClass="quote-author" />
+                    </VBox>
+
+                </VBox>
+            </VBox>
+        </HBox>
+    </children>
+</AnchorPane>
